@@ -1,3 +1,123 @@
-@import './general.scss';
-@import './home.scss';
-@import './detail.scss';
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 1px 11px rgb(0 0 0 / 8%);
+    box-shadow: 0 1px 11px rgb(0 0 0 / 8%);
+
+    &-img {
+        width: 132px;
+        object-fit: contain;
+        cursor: pointer;
+    }
+
+    &-menu {
+        margin: 0px;
+        color: #071139;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0px 15px 0px 15px;
+        cursor: pointer;
+
+        &-active {
+            color: #FF4A22;
+        }
+    }
+
+    &-search {
+        width: 400px;
+        height: 36px;
+        background-color: #f2f3f5;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        padding: 5px 10px 5px 10px;
+        box-sizing: border-box;
+        margin-right: 15px;
+
+        &-input {
+            flex: 1;
+            height: 26px;
+            border: none;
+            background-color: #f2f3f5;
+        }
+
+        &-input:focus {
+            outline: none;
+        }
+
+        &-img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &-download {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        cursor: pointer;
+
+        &-img {
+            width: 24px;
+            object-fit: contain;
+        }
+
+        &-desc {
+            border: 2px solid #FF4A22;
+            border-left: none;
+            height: 25px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            border-bottom-right-radius: 10px;
+
+            &-text {
+                margin: 0px;
+                font-size: 14px;
+                color: #FF4A22;
+                padding: 0px 10px 0px 5px;
+            }
+        }
+    }
+
+    &-icon {
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+    &-icon-lang {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    &-input-lang {
+        border: none;
+        font-size: 14px;
+        color: #071139;
+        margin-right: 15px;
+    }
+
+    &-input-lang:focus {
+        outline: none;
+    }
+
+    &-user {
+        background-color: #FF4A22;
+        height: 34px;
+        width: 34px;
+        border-radius: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &-img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+    }
+}

@@ -227,6 +227,7 @@ const Home = () => {
                     ) }
                 </Carousel>
             </div>
+            
             <div className="home-menu">
                 { dataMenu.map((item) => 
                     <div className={item.name === 'Semua' ? "home-menu-item home-menu-item-active" : "home-menu-item"} key={item.id}>

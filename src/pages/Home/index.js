@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 import { Header, Footer } from '../../components'
+
 
 const Home = () => {
     const [dataCaurosel, setDataCaurosel] = useState([
@@ -221,9 +223,11 @@ const Home = () => {
             <div className="home-wrapper-caurosel">
                 <Carousel autoPlay={true} interval={3000} showThumbs={false} showStatus={false}>
                     { dataCaurosel.map((item) => 
-                        <div key={item.id}>
-                            <img src={item.img} />
-                        </div>
+                        <Link to="/detail">
+                            <div key={item.id}>
+                                <img src={item.img} />
+                            </div>
+                        </Link>
                     ) }
                 </Carousel>
             </div>
@@ -240,10 +244,12 @@ const Home = () => {
                         <p className="home-main-section-title">{item.name}</p>
                         <div className="home-main-section-content">
                             { item.data.map((itemDetail) => 
-                                <div className="home-main-section-content-item" key={itemDetail.id}>
-                                    <img className="home-main-section-content-item-img" src={itemDetail.img} />
-                                    <p className="home-main-section-content-item-title">{itemDetail.name}</p>
-                                </div>
+                                <Link to="/detail" style={{ textDecoration: 'none' }}>
+                                    <div className="home-main-section-content-item" key={itemDetail.id}>
+                                        <img className="home-main-section-content-item-img" src={itemDetail.img} />
+                                        <p className="home-main-section-content-item-title">{itemDetail.name}</p>
+                                    </div>
+                                </Link>
                             ) }
                         </div>
                     </div>

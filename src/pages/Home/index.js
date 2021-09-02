@@ -51,8 +51,7 @@ const Home = () => {
         }
     }, [])
 
-    const { movieNowPlaying, moviePopular, movieTopRated, movieUpcoming } = stateGlobal.Movie
-    console.log('menu active', menuActive)
+    const { movieNowPlaying, moviePopular, movieTopRated, movieUpcoming } = stateGlobal.Movie;
     return (
         <div className="home">
             <Header />

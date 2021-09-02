@@ -1,0 +1,3 @@
+//movie
+export const CLEAR_MOVIE_LIST='CLEAR_MOVIE_LIST' 
+export const SET_MOVIE_LIST='SET_MOVIE_LIST' 

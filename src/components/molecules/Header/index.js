@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { ImgLogo, ICSearch, ICDownload, ICClock, ICNetwork, ICUser, ICUpload } from '../../../assets'
 
 const Header = () => {
     return (
         <div className="header">
-            <img src={ImgLogo} className="header-img" />
+            <Link to="/">
+                <img src={ImgLogo} className="header-img" />
+            </Link>
             <p className="header-menu header-menu-active">Untukmu</p>
             <p className="header-menu">Semua</p>
             <div className="header-search">

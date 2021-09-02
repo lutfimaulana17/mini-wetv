@@ -1,10 +1,14 @@
 import logo from './logo.svg';
 import './styles/index.scss';
 import Routes from './routes';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
   return (
-    <Routes />
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
 }
 

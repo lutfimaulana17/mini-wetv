@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import { ICStar, ICLike } from '../../assets';
 
 import { Header, Footer } from '../../components';
 
-const Detail = () => {
+const Detail = (props) => {
     const [dataMoviePopuler, setDataMoviePopuler] = useState([
         {
             id: 1,
@@ -22,6 +22,11 @@ const Detail = () => {
             img: 'https://awsimages.detik.net.id/community/media/visual/2016/08/02/05ec4ce6-6a37-49a2-9910-33722bd206a4.jpg?w=650&q=90'
         }
     ])
+
+    useEffect(() => {
+        console.log('ini id nya', props.match.params.id)
+    }, [])
+
     return (
         <div className="detail">
             <Header />
@@ -94,4 +99,4 @@ const Detail = () => {
     )
 }
 
-export default Detail
+export default withRouter(Detail)

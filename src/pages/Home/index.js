@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-import { Header } from '../../components'
+import { Header, Footer } from '../../components'
 
 const Home = () => {
     const [dataCaurosel, setDataCaurosel] = useState([
@@ -227,7 +227,6 @@ const Home = () => {
                     ) }
                 </Carousel>
             </div>
-            
             <div className="home-menu">
                 { dataMenu.map((item) => 
                     <div className={item.name === 'Semua' ? "home-menu-item home-menu-item-active" : "home-menu-item"} key={item.id}>
@@ -250,6 +249,7 @@ const Home = () => {
                     </div>
                 ) }
             </div>
+            <Footer />
         </div>
     )
 }

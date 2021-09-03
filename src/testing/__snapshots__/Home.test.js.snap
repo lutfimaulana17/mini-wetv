@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots component Home Home Footer snapshots 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="footer-left"
+  >
+    <p
+      className="footer-left-text"
+    >
+      Copyright © 1998-2021 Image Future Investment (HK) Limited.
+    </p>
+    <p
+      className="footer-left-text"
+    >
+      Ketentuan pelayanan | Perjanjian privasi | Cookie Policy | Saran | Pertanyaan yang sering diajukan | @wetvapp
+    </p>
+  </div>
+  <div
+    className="footer-right"
+  >
+    <img
+      className="footer-right-img"
+      src="https://puui.qpic.cn/vupload/0/1575530292773_zk8ru850ein.png/0"
+    />
+    <p
+      className="footer-right-text"
+    >
+      Pindai kode QR untuk mengunduh sekarang!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`snapshots component Home Home Header snapshots 1`] = `
+<div
+  className="header"
+>
+  <Link
+    to="/"
+  >
+    <img
+      className="header-img"
+      src="logo.png"
+    />
+  </Link>
+  <p
+    className="header-menu header-menu-active"
+  >
+    Untukmu
+  </p>
+  <p
+    className="header-menu"
+  >
+    Semua
+  </p>
+  <div
+    className="header-search"
+  >
+    <input
+      className="header-search-input"
+    />
+    <img
+      className="header-search-img"
+      src="ic-search.png"
+    />
+  </div>
+  <div
+    className="header-download"
+  >
+    <img
+      className="header-download-img"
+      src="ic-download.png"
+    />
+    <div
+      className="header-download-desc"
+    >
+      <p
+        className="header-download-desc-text"
+      >
+        Unduh Aplikasi
+      </p>
+    </div>
+  </div>
+  <img
+    className="header-icon"
+    src="ic-clock.png"
+  />
+  <img
+    className="header-icon"
+    src="ic-upload.png"
+  />
+  <img
+    className="header-icon-lang"
+    src="ic-network.png"
+  />
+  <select
+    className="header-input-lang"
+    defaultValue="1"
+    id="header-input-lang"
+  >
+    <option
+      value="1"
+    >
+      Bahasa Indonesia
+    </option>
+    <option
+      value="2"
+    >
+      English
+    </option>
+    <option
+      value="3"
+    >
+      Espanyol
+    </option>
+    <option
+      value="4"
+    >
+      Portuges
+    </option>
+  </select>
+  <div
+    className="header-user"
+  >
+    <img
+      className="header-user-img"
+      src="ic-user.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`snapshots component Home Home snapshots 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "@@observable": [Function],
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Home />
+</ContextProvider>
+`;

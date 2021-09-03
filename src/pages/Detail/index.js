@@ -6,6 +6,7 @@ import { ICStar, ICLike } from '../../assets';
 import { Header, Footer } from '../../components';
 
 import { clearMoviePopular, requestMoviePopular, clearMovieDetail, requestMovieDetail } from '../../redux/actions/Movie';
+import moment from 'moment';
 
 const Detail = (props) => {
     const dispatch = useDispatch()
@@ -19,6 +20,10 @@ const Detail = (props) => {
             dispatch(clearMovieDetail())
         }
     }, [])
+
+    const changeFormatDate = (date) => {
+        return moment(date).format('LL')
+    } 
 
     const { moviePopular, movieDetail } = stateGlobal.Movie;
     return (
@@ -36,7 +41,7 @@ const Detail = (props) => {
                         <img className="detail-main-left-header-img" src={`https://image.tmdb.org/t/p/w200${movieDetail.poster_path}`} />  
                         <div className="detail-main-left-header-content">
                             <p className="detail-main-left-header-content-title">{movieDetail.title}</p>
-                            <p className="detail-main-left-header-content-desc">Release: {movieDetail.release_date}</p>
+                            <p className="detail-main-left-header-content-desc">Release: {changeFormatDate(movieDetail.release_date)}</p>
                             <div className="detail-main-left-header-content-rating">
                                 <img src={ICStar} className="detail-main-left-header-content-rating-img" />
                                 <p className="detail-main-left-header-content-rating-text">{movieDetail.vote_average}</p>
@@ -48,7 +53,7 @@ const Detail = (props) => {
                         </div>
                     </div>                
                     <div className="detail-main-left-item">
-                        <p className="detail-main-left-item-title">Status</p>
+                        <p className="detail-main-left-item-title" id="detail-status">Status</p>
                         <p className="detail-main-left-item-desc">{movieDetail.status}</p>
                     </div>
                     <div className="detail-main-left-item">

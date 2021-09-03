@@ -6,12 +6,13 @@ import { Home } from "../pages";
 import { Provider } from 'react-redux';
 import store from '../redux/store';
 import { Footer, Header } from "../components";
+import { ShallowMock } from './shallow-mock.jsx';
 
 import { ImgLogo } from '../assets'
 
 describe("rendering components home", () => {
     it("renders Home component without crashing", () => {
-        shallow(<Provider store={store}><Home /></Provider>);
+        shallow(ShallowMock(<Home />, store));
     })
 
     it("renders Home header without crashing", () => {
@@ -32,7 +33,7 @@ describe("rendering components home", () => {
 })
 
 describe("test logic components home", () => {
-    const wrapper = shallow(<Provider store={store}><Home /></Provider>);
+    const wrapper = shallow(ShallowMock(<Home />, store));
     
     wrapper.find("#menu-film2").simulate("click");
     it("button menu 2 click - update content", () => {
@@ -61,7 +62,7 @@ describe("test logic components home", () => {
 
 describe("snapshots component Home", () => {
     it("Home snapshots", () => {
-      const homeSnap = shallow(<Provider store={store}><Home /></Provider>);
+      const homeSnap = shallow(ShallowMock(<Home />, store));
       expect(toJson(homeSnap)).toMatchSnapshot()
     })
   

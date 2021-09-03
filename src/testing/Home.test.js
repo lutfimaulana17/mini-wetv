@@ -31,8 +31,8 @@ describe("rendering components home", () => {
 
 describe("test logic components home", () => {
     const wrapper = shallow(<Provider store={store}><Home /></Provider>);
+    
     wrapper.find("#menu-film2").simulate("click");
-
     it("button menu 2 click - update content", () => {
         const titleSectionContent = wrapper.find(".home-menu-item-text-active").text();
         expect(titleSectionContent).toEqual('Now Playing');
@@ -51,7 +51,7 @@ describe("test logic components home", () => {
     })
 
     wrapper.find("#menu-film5").simulate("click");
-    it("button menu 4 click - update content", () => {
+    it("button menu 5 click - update content", () => {
         const titleSectionContent = wrapper.find(".home-menu-item-text-active").text();
         expect(titleSectionContent).toEqual('Upcoming');
     })

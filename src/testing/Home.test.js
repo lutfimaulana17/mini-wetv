@@ -1,9 +1,11 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
+import toJson from "enzyme-to-json";
+
 import { Home } from "../pages";
 import { Provider } from 'react-redux';
 import store from '../redux/store';
-import { Header } from "../components";
+import { Footer, Header } from "../components";
 
 import { ImgLogo } from '../assets'
 
@@ -54,6 +56,23 @@ describe("test logic components home", () => {
     it("button menu 5 click - update content", () => {
         const titleSectionContent = wrapper.find(".home-menu-item-text-active").text();
         expect(titleSectionContent).toEqual('Upcoming');
+    })
+})
+
+describe("snapshots component Home", () => {
+    it("Home snapshots", () => {
+      const homeSnap = shallow(<Provider store={store}><Home /></Provider>);
+      expect(toJson(homeSnap)).toMatchSnapshot()
+    })
+  
+    it("Home Header snapshots", () => {
+        const homeHeaderSnap = shallow(<Header />);
+        expect(toJson(homeHeaderSnap)).toMatchSnapshot()
+    })
+
+    it("Home Footer snapshots", () => {
+        const homeFooterSnap = shallow(<Footer />);
+        expect(toJson(homeFooterSnap)).toMatchSnapshot()
     })
 })
 

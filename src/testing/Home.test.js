@@ -6,7 +6,7 @@ import { Home } from "../pages";
 import { Provider } from 'react-redux';
 import store from '../redux/store';
 import { Footer, Header } from "../components";
-import { ShallowMock } from './shallow-mock.jsx';
+import { ShallowMock } from './shallow-mock.js';
 
 import { ImgLogo } from '../assets'
 

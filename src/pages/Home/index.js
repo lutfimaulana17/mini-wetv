@@ -73,7 +73,7 @@ const Home = () => {
             </div>
             <div className="home-menu">
                 { dataMenu.map((item, index) => 
-                    <div className={item.id === menuActive ? "home-menu-item home-menu-item-active" : "home-menu-item"} key={index} onClick={() => setMenuActive(item.id)}>
+                    <div id={`menu-film${item.id}`} className={item.id === menuActive ? "home-menu-item home-menu-item-active" : "home-menu-item"} key={index} onClick={() => setMenuActive(item.id)}>
                         <p className={item.id === menuActive ? "home-menu-item-text home-menu-item-text-active" : "home-menu-item-text"} >{item.name}</p>
                     </div>
                 ) }

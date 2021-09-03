@@ -23,7 +23,7 @@ const Header = () => {
             <img src={ICClock} className="header-icon" />
             <img src={ICUpload} className="header-icon" />
             <img src={ICNetwork} className="header-icon-lang" />
-            <select defaultValue="1" className="header-input-lang">
+            <select defaultValue="1" className="header-input-lang" id="header-input-lang">
                 <option value="1">Bahasa Indonesia</option>
                 <option value="2">English</option>
                 <option value="3">Espanyol</option>

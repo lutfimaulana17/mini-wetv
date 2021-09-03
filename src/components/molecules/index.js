@@ -1,4 +1,5 @@
 import Header from './Header';
 import Footer from './Footer';
+import ItemMovie from './ItemMovie';
 
-export { Header, Footer }
+export { Header, Footer, ItemMovie }

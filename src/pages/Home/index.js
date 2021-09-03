@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-import { Header, Footer } from '../../components'
+import { Header, Footer, ItemMovie } from '../../components'
 import { clearMovieLatest, clearMovieNowPlaying, clearMoviePopular, clearMovieTopRated, requestMovieLatest, requestMovieNowPlaying, requestMoviePopular, requestMovieTopRated, requestMovieUpcoming, clearMovieUpcoming } from '../../redux/actions/Movie';
 
 
@@ -85,14 +85,9 @@ const Home = () => {
                         <div className="home-main-section-content">
                             { movieNowPlaying ?
                                 movieNowPlaying.results.length > 0 ?
-                                        movieNowPlaying.results.slice(0, 10).map((item, index) => 
-                                            <Link to={`/detail/${item.id}`} style={{ textDecoration: 'none' }} key={index}>
-                                                <div className="home-main-section-content-item">
-                                                    <img className="home-main-section-content-item-img" src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} />
-                                                    <p className="home-main-section-content-item-title">{item.title}</p>
-                                                </div>
-                                            </Link>
-                                        )
+                                    movieNowPlaying.results.slice(0, 10).map((item, index) => 
+                                        <ItemMovie id={item.id} poster_path={item.poster_path} title={item.title} key={index} />
+                                    )
                                     : <p>No data!</p>
                                 : <p>Loading...</p>
                             }
@@ -106,13 +101,8 @@ const Home = () => {
                             { moviePopular ?
                                 moviePopular.results.length > 0 ?
                                     moviePopular.results.slice(0, 10).map((item, index) => 
-                                            <Link to={`/detail/${item.id}`} style={{ textDecoration: 'none' }} key={index}>
-                                                <div className="home-main-section-content-item">
-                                                    <img className="home-main-section-content-item-img" src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} />
-                                                    <p className="home-main-section-content-item-title">{item.title}</p>
-                                                </div>
-                                            </Link>
-                                        )
+                                        <ItemMovie id={item.id} poster_path={item.poster_path} title={item.title} key={index} />
+                                    )
                                     : <p>No data!</p>
                                 : <p>Loading...</p>
                             }
@@ -126,13 +116,8 @@ const Home = () => {
                             { movieTopRated ?
                                 movieTopRated.results.length > 0 ?
                                     movieTopRated.results.slice(0, 10).map((item, index) => 
-                                            <Link to={`/detail/${item.id}`} style={{ textDecoration: 'none' }} key={index}>
-                                                <div className="home-main-section-content-item">
-                                                    <img className="home-main-section-content-item-img" src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} />
-                                                    <p className="home-main-section-content-item-title">{item.title}</p>
-                                                </div>
-                                            </Link>
-                                        )
+                                        <ItemMovie id={item.id} poster_path={item.poster_path} title={item.title} key={index} />
+                                    )
                                     : <p>No data!</p>
                                 : <p>Loading...</p>
                             }
@@ -146,13 +131,8 @@ const Home = () => {
                             { movieUpcoming ?
                                 movieUpcoming.results.length > 0 ?
                                     movieUpcoming.results.slice(0, 10).map((item, index) => 
-                                            <Link to={`/detail/${item.id}`} style={{ textDecoration: 'none' }} key={index}>
-                                                <div className="home-main-section-content-item">
-                                                    <img className="home-main-section-content-item-img" src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} />
-                                                    <p className="home-main-section-content-item-title">{item.title}</p>
-                                                </div>
-                                            </Link>
-                                        )
+                                        <ItemMovie id={item.id} poster_path={item.poster_path} title={item.title} key={index} />
+                                    )
                                     : <p>No data!</p>
                                 : <p>Loading...</p>
                             }

@@ -6,7 +6,7 @@ import { Home } from "../pages";
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
-import { Footer, Header } from "../components";
+import { Footer, Header, ItemMovie } from "../components";
 
 import { ImgLogo } from '../assets'
 
@@ -30,10 +30,27 @@ describe("rendering components home", () => {
 
         const headerMenu2 = (<p className="header-menu">Semua</p>)
         expect(wrapper.contains(headerMenu2)).toEqual(true);
-        console.log(wrapper.find('#header-input-lang'))
         let defaultLang = wrapper.find('#header-input-lang').props().defaultValue;
         
         expect(defaultLang).toEqual('1');
+    })
+
+    it("renders Home item movie without crashing", () => {
+        const wrapper = mount(<Router><ItemMovie id="1" title="Testing" poster_path="/iXbWpCkIauBMStSTUT9v4GXvdgH.jpg" /></Router>)
+
+        const title = wrapper.find('.home-main-section-content-item-title').text()
+        expect(title).toEqual("Testing")
+        expect(wrapper.props().children.props.id).toEqual("1");
+        expect(wrapper.props().children.props.poster_path).toEqual("/iXbWpCkIauBMStSTUT9v4GXvdgH.jpg");
+        // console.log(wrapper.html())
+        // console.log(wrapper.debug())
+    })
+
+    it("renders Home footer without crashing", () => {
+        const wrapper = mount(<Footer />)
+
+        const textCopyRight = wrapper.find('#text-copyright').text()
+        expect(textCopyRight).toEqual('Copyright © 1998-2021 Image Future Investment (HK) Limited.');
     })
 })
 

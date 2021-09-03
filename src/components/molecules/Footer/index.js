@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-left">
-                <p className="footer-left-text">Copyright © 1998-2021 Image Future Investment (HK) Limited.</p>
+                <p className="footer-left-text" id="text-copyright">Copyright © 1998-2021 Image Future Investment (HK) Limited.</p>
                 <p className="footer-left-text">Ketentuan pelayanan | Perjanjian privasi | Cookie Policy | Saran | Pertanyaan yang sering diajukan | @wetvapp</p>
             </div>
             <div className="footer-right"> 

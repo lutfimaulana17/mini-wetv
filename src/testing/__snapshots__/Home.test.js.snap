@@ -9,6 +9,7 @@ exports[`snapshots component Home Home Footer snapshots 1`] = `
   >
     <p
       className="footer-left-text"
+      id="text-copyright"
     >
       Copyright © 1998-2021 Image Future Investment (HK) Limited.
     </p>
